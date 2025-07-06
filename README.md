@@ -65,25 +65,3 @@ Default GitHub branch changed from main ➜ master
 👤 Author
 @nikemod1
 
-📄 License
-This project is licensed under the MIT License.
-
-🧪 TODOs (Optional Enhancements)
-Add dark mode support
-
-Enhance mobile UX
-
-Toggle between GPT-3.5 / GPT-4 responses
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you want me to generate:
-- A project logo/banner
-- A GIF demo preview
-- or automate docs like API usage or `.env` secrets encryption
-
-Happy shipping! 🚀
