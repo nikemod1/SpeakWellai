@@ -87,20 +87,3 @@ Let me know if you want me to generate:
 - or automate docs like API usage or `.env` secrets encryption
 
 Happy shipping! 🚀
-
-
-
-
-
-
-
-
-Ask ChatGPT
-
-
-
-Tools
-
-
-
-ChatGPT can make mistakes. Check i
