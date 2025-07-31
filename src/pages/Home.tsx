@@ -1,65 +1,98 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Sparkles } from 'lucide-react';
 
-const Home: React.FC = () => {
+const Navigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
+
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/course', label: 'Course' },
+    { path: '/chatbot-practice', label: 'AI Practice' },
+    { path: '/contact', label: 'Contact' },
+    { path: '/about', label: 'About' },
+  ];
+
   return (
-    <div className="pt-24 bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen">
-      {/* Hero Section */}
-      <section className="text-center px-6 md:px-16 lg:px-32 py-20">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-6">
-          Master English Speaking in <span className="text-blue-600">25 Days</span> with AI
-        </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-          Interactive AI-powered speaking practice sessions + live classes from experts to make you confident and fluent.
-        </p>
-        <Link
-          to="/join-now"
-          className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:scale-105 transform transition-all duration-300"
-        >
-          Join Now <Sparkles className="ml-2 w-5 h-5" />
-        </Link>
-      </section>
+    <nav className="relative w-full z-50 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <Link to="/" className="flex flex-col leading-tight">
+            <span className="text-2xl font-black text-gray-900">
+              SpeakWell<span className="text-blue-600">AI</span>
+            </span>
+            <span className="text-xs text-gray-500 font-medium -mt-1">Powered by AI</span>
+          </Link>
 
-      {/* Features Section */}
-      <section className="bg-white py-16 px-6 md:px-16 lg:px-32">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Why SpeakWellAI?</h2>
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            {
-              title: 'AI Speaking Practice',
-              desc: 'Talk to AI bots anytime and get real-time feedback on your fluency and pronunciation.',
-            },
-            {
-              title: 'Live Expert Classes',
-              desc: 'Attend live daily classes from professional English coaches with personalized attention.',
-            },
-            {
-              title: '25-Day Fast Track',
-              desc: 'Our proven 25-day schedule guarantees confidence, fluency, and success.',
-            },
-          ].map((item, i) => (
-            <div key={i} className="bg-gray-50 p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
-              <h3 className="text-xl font-semibold text-blue-600 mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.desc}</p>
-            </div>
-          ))}
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`relative px-6 py-3 text-sm font-semibold transition-all duration-300 rounded-full group ${
+                  isActive(item.path)
+                    ? 'text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              to="/join-now"
+              className="ml-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-8 py-3 rounded-full font-bold text-sm shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300"
+            >
+              <span className="flex items-center gap-2">
+                Join Now
+                <Sparkles className="w-4 h-4" />
+              </span>
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-3 rounded-2xl text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 transform hover:scale-110"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
-      </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Speak with Confidence?</h2>
-        <p className="text-lg mb-6">Join now and get lifetime access to SpeakWellAI</p>
-        <Link
-          to="/join-now"
-          className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transform transition-all duration-300"
-        >
-          Join for ₹1000
-        </Link>
-      </section>
-    </div>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl">
+            <div className="px-4 py-6 space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-6 py-4 text-base font-semibold transition-all duration-300 rounded-2xl ${
+                    isActive(item.path)
+                      ? 'text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link
+                to="/join-now"
+                onClick={() => setIsMenuOpen(false)}
+                className="block mt-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-4 rounded-2xl font-bold text-center shadow-2xl"
+              >
+                Join Now - ₹1000
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 };
 
-export default Home;
+export default Navigation;
