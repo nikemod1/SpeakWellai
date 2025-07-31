@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sparkles } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -26,12 +17,9 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      isScrolled ? 'shadow-2xl border-b border-gray-100 bg-transparent' : 'bg-transparent'
-    }`}>
+    <nav className="relative w-full z-50 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Title only (no logo) */}
           <Link to="/" className="flex flex-col leading-tight">
             <span className="text-2xl font-black text-gray-900">
               SpeakWell<span className="text-blue-600">AI</span>
@@ -39,7 +27,7 @@ const Navigation: React.FC = () => {
             <span className="text-xs text-gray-500 font-medium -mt-1">Powered by AI</span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
@@ -52,17 +40,11 @@ const Navigation: React.FC = () => {
                 }`}
               >
                 {item.label}
-                {isActive(item.path) && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-20 animate-pulse" />
-                )}
-                {!isActive(item.path) && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                )}
               </Link>
             ))}
             <Link
               to="/join-now"
-              className="ml-4 btn-premium bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-8 py-3 rounded-full font-bold text-sm shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 animate-gradient"
+              className="ml-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-8 py-3 rounded-full font-bold text-sm shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300"
             >
               <span className="flex items-center gap-2">
                 Join Now
@@ -80,9 +62,9 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 border-b border-gray-100 shadow-2xl">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl">
             <div className="px-4 py-6 space-y-2">
               {navItems.map((item) => (
                 <Link
@@ -101,7 +83,7 @@ const Navigation: React.FC = () => {
               <Link
                 to="/join-now"
                 onClick={() => setIsMenuOpen(false)}
-                className="block mt-4 btn-premium bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-4 rounded-2xl font-bold text-center shadow-2xl animate-gradient"
+                className="block mt-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-4 rounded-2xl font-bold text-center shadow-2xl"
               >
                 Join Now - ₹1000
               </Link>
