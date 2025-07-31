@@ -6,6 +6,7 @@ import Course from './pages/Course';
 import JoinNow from './pages/JoinNow';
 import ChatbotPractice from './pages/ChatbotPractice';
 import Contact from './pages/Contact';
+import About from './pages/About'; // ✅ Import About
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/join-now" element={<JoinNow />} />
           <Route path="/chatbot-practice" element={<ChatbotPractice />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} /> {/* ✅ Add About route */}
         </Routes>
       </Layout>
     </Router>
