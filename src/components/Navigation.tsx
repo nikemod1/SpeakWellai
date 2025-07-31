@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sparkles } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  scrollDirection?: 'up' | 'down';
+}
+
+const Navigation: React.FC<NavigationProps> = ({ scrollDirection = 'up' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -17,7 +21,11 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className="relative w-full z-50 bg-white">
+    <nav
+      className={`fixed w-full z-50 bg-white transition-transform duration-300 ${
+        scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex flex-col leading-tight">
