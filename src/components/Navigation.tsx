@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageSquare, Brain, Sparkles } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,32 +22,21 @@ const Navigation: React.FC = () => {
     { path: '/course', label: 'Course' },
     { path: '/chatbot-practice', label: 'AI Practice' },
     { path: '/contact', label: 'Contact' },
-    { path: '/about', label: 'About' }, // ✅ Added About
+    { path: '/about', label: 'About' },
   ];
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-white/90 backdrop-blur-xl shadow-2xl border-b border-gray-100' 
-        : 'bg-transparent'
+      isScrolled ? 'shadow-2xl border-b border-gray-100 bg-transparent' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 animate-pulse-glow">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
-                <MessageSquare className="w-3 h-3 text-white" />
-              </div>
-              <Sparkles className="w-4 h-4 text-yellow-400 absolute -top-2 -left-2 animate-pulse" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-black gradient-text">SpeakWell<span className="text-blue-600">AI</span></span>
-              <span className="text-xs text-gray-500 font-medium">Powered by AI</span>
-            </div>
+          {/* Title only (no logo) */}
+          <Link to="/" className="flex flex-col leading-tight">
+            <span className="text-2xl font-black text-gray-900">
+              SpeakWell<span className="text-blue-600">AI</span>
+            </span>
+            <span className="text-xs text-gray-500 font-medium -mt-1">Powered by AI</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -93,7 +82,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-2xl">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 border-b border-gray-100 shadow-2xl">
             <div className="px-4 py-6 space-y-2">
               {navItems.map((item) => (
                 <Link
