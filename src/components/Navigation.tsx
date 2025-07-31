@@ -22,6 +22,7 @@ const Navigation: React.FC = () => {
     { path: '/course', label: 'Course' },
     { path: '/chatbot-practice', label: 'AI Practice' },
     { path: '/contact', label: 'Contact' },
+    { path: '/about', label: 'About' }, // ✅ Added About
   ];
 
   return (
