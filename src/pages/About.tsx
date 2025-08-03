@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Users, Award } from 'lucide-react';
+import founderImage from '../pc.jpeg'; // adjust the path if necessary
 
 const About: React.FC = () => {
   return (
@@ -18,8 +19,12 @@ const About: React.FC = () => {
 
           <div className="max-w-4xl mx-auto">
             <div className="card-hover bg-gradient-to-br from-blue-50 to-purple-50 p-12 rounded-3xl border border-gray-100 text-center">
-              <div className="w-32 h-32 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-full mx-auto mb-8 flex items-center justify-center">
-                <span className="text-4xl font-black text-white">PC</span>
+              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-8 shadow-lg">
+                <img
+                  src={founderImage}
+                  alt="Ms. Payal Chakole"
+                  className="object-cover w-full h-full"
+                />
               </div>
 
               <h3 className="text-3xl font-bold text-gray-900 mb-2">Ms. Payal Chakole</h3>
