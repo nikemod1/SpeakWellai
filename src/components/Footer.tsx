@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
               <li className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-blue-400" />
                 <a href="mailto:speakwellai@gmail.com" className="hover:text-blue-300 transition">
-                  support@speakwellai.com
+                  speakwellai@gmail.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
