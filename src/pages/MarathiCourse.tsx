@@ -70,7 +70,7 @@ const MarathiCourse: React.FC = () => {
 
             <div className="flex justify-center">
               <a
-                href="https://forms.gle/7o97QFeea99V6oEH7"
+                href="https://forms.gle/W1zunBtijU2pB96R9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
