@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Course from './pages/Course'; 
-import Course from './pages/MarathiCourse';
+import MarathiCourse from './pages/MarathiCourse';
 import JoinNow from './pages/JoinNow';
 import ChatbotPractice from './pages/ChatbotPractice';
 import Contact from './pages/Contact';
