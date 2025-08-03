@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
           </p>
 
           <a
-            href="https://forms.gle/your-google-form-id"
+            href="https://forms.gle/u4V4Jipi7nr3gAGTA"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 px-8 py-4 rounded-full font-bold text-white text-lg hover:scale-105 transition transform shadow-lg"
