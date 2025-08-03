@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Use HashRouter
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Course from './pages/Course'; 
@@ -7,7 +7,7 @@ import MarathiCourse from './pages/MarathiCourse';
 import JoinNow from './pages/JoinNow';
 import ChatbotPractice from './pages/ChatbotPractice';
 import Contact from './pages/Contact';
-import About from './pages/About'; // ✅ Import About
+import About from './pages/About';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/join-now" element={<JoinNow />} />
           <Route path="/chatbot-practice" element={<ChatbotPractice />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} /> {/* ✅ Add About route */}
+          <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
     </Router>
