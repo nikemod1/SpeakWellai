@@ -15,6 +15,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollDirection = 'up' }) => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/course', label: 'Course' },
+    { path: '/MarathiCourse', label: 'Marathi' },
     { path: '/chatbot-practice', label: 'AI Practice' },
     { path: '/contact', label: 'Contact' },
     { path: '/about', label: 'About' },
