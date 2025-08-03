@@ -170,9 +170,15 @@ const Home: React.FC = () => {
           <p className="text-xl mb-8 text-blue-100">
             Join thousands of learners who are already mastering languages and tech skills with SpeakWellAI
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl">
-            Start Learning Today
-          </button>
+          <a
+  href="https://forms.gle/u4V4Jipi7nr3gAGTA"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl inline-block text-center"
+>
+  Start Learning Today
+</a>
+
         </div>
       </section>
 
