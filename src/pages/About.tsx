@@ -93,6 +93,20 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact / Address Section */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Office</h3>
+          <p className="text-lg text-gray-600">
+            SpeakWellAI Learning Pvt. Ltd.<br />
+            Santkrupa Building, Milan Square,<br />
+            Mangalwari Peth, Umred,<br />
+            Nagpur, Maharashtra - 441203<br />
+            India
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
