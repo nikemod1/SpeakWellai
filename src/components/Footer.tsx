@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <h2 className="text-3xl font-bold mb-4">SpeakWellAI</h2>
             <p className="text-gray-300 mb-6 max-w-md text-lg leading-relaxed">
-              Master English speaking in just 25 days with AI-powered practice sessions and live expert classes.
+              Master English speaking in just 8 weeks with AI-powered practice sessions and live expert classes.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
@@ -49,14 +49,14 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <a href="mailto:support@speakwellai.com" className="hover:text-blue-300 transition">
+                <a href="mailto:speakwellai@gmail.com" className="hover:text-blue-300 transition">
                   support@speakwellai.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-5 h-5 text-green-400" />
-                <a href="https://wa.me/91XXXXXXXXXX" className="hover:text-green-300 transition">
-                  +91-XXXXXXXXXX
+                <a href="https://wa.me/918275873103" className="hover:text-green-300 transition">
+                  +91-8275873103
                 </a>
               </li>
             </ul>
