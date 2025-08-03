@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import {
   Clock,
@@ -70,13 +69,15 @@ const MarathiCourse: React.FC = () => {
             </div>
 
             <div className="flex justify-center">
-              <Link
-                to="/join-now"
+              <a
+                href="https://forms.gle/7o97QFeea99V6oEH7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Enroll Now - ₹1200
+                Enroll Now - ₹1500
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
