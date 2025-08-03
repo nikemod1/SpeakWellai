@@ -12,7 +12,7 @@ const About: React.FC = () => {
               <span className="gradient-text">Founder & Managing Director</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visionary leadership bridging language and technology education
+              Visionary leadership bridging language and technology education 100
             </p>
           </div>
 
