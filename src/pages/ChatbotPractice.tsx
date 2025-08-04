@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, MessageSquare, Sparkles, Zap, Target, TrendingUp, Mic, Volume2, ArrowRight } from 'lucide-react';
+import { Brain, Sparkles, TrendingUp, Mic, ArrowRight } from 'lucide-react';
 
 const ChatbotPractice: React.FC = () => {
   return (
@@ -33,7 +33,7 @@ const ChatbotPractice: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-orange-400/30 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
-              Join Free Demo class
+              Enroll for Free Demo Class
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
@@ -87,20 +87,19 @@ const ChatbotPractice: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="btn-premium bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300">
-                  <span className="flex items-center justify-center gap-3">
-                    Get Notified When Ready
-                    <Sparkles className="w-5 h-5" />
-                  </span>
-                </button>
-                <button className="glass text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border-2 border-white/30">
-                  <span className="flex items-center justify-center gap-3">
-                    Join Live Classes Instead
-                    <MessageSquare className="w-5 h-5" />
-                  </span>
-                </button>
+              {/* ✅ Replaced Button */}
+              <div className="flex justify-center">
+                <a
+                  href="https://forms.gle/7o97QFeea99V6oEH7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-orange-400/30 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                >
+                  Enroll for Free Demo Class
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </div>
+
             </div>
           </div>
         </div>
