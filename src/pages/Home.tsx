@@ -176,7 +176,7 @@ const Home: React.FC = () => {
   rel="noopener noreferrer"
   className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl inline-block text-center"
 >
-  Start Learning Today
+  Enroll For Free Demo Class
 </a>
 
         </div>
