@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, MessageSquare, Sparkles, Zap, Target, TrendingUp, Mic, Volume2 } from 'lucide-react';
+import { Brain, MessageSquare, Sparkles, Zap, Target, TrendingUp, Mic, Volume2, ArrowRight } from 'lucide-react';
 
 const ChatbotPractice: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const ChatbotPractice: React.FC = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       <div className="absolute top-20 left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{animationDelay: '-2s'}}></div>
+      <div className="absolute bottom-20 right-10 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }}></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -15,11 +15,30 @@ const ChatbotPractice: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-black text-white mb-8">
             AI English Speaking <span className="gradient-text text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-400">Practice</span>
           </h1>
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-4">
             Practice your English speaking skills with our advanced AI chatbot. 
             Get instant feedback and improve your fluency 24/7.
           </p>
-          
+
+          {/* ✅ Newly Added AI Tools Info */}
+          <p className="text-lg text-orange-200 font-medium max-w-3xl mx-auto mb-8">
+            In all our online courses, we use AI tools for learning. For our language speaking course, we provide an AI-powered chatbot for practice.
+          </p>
+
+          {/* ✅ Join Free Demo Button */}
+          <div className="flex justify-center mb-8">
+            <a
+              href="https://forms.gle/7o97QFeea99V6oEH7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-orange-400/30 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              Join Free Demo class
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+
+          {/* Tag badges */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="glass px-6 py-3 rounded-full border border-white/20">
               <span className="text-blue-300 font-semibold">🤖 AI-Powered</span>
@@ -48,7 +67,7 @@ const ChatbotPractice: React.FC = () => {
                 We're integrating cutting-edge AI technology to provide you with the most 
                 advanced English speaking practice experience. This revolutionary feature will be available soon!
               </p>
-              
+
               {/* Feature Preview */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="glass p-6 rounded-2xl border border-white/20">
@@ -67,7 +86,7 @@ const ChatbotPractice: React.FC = () => {
                   <p className="text-gray-400 text-sm">Detailed analytics and improvement insights</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <button className="btn-premium bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300">
                   <span className="flex items-center justify-center gap-3">
