@@ -94,7 +94,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollDirection = 'up' }) => {
                 onClick={() => setIsMenuOpen(false)}
                 className="block mt-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-4 rounded-2xl font-bold text-center shadow-2xl"
               >
-                Join Now
+                Join Now Free Demo Class
               </Link>
             </div>
           </div>
