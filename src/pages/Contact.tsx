@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 px-8 py-4 rounded-full font-bold text-white text-lg hover:scale-105 transition transform shadow-lg"
           >
-            Submit Enquiry Form
+            Join For Free Demo Class
           </a>
         </div>
       </section>
