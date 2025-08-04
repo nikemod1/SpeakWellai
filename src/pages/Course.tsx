@@ -50,8 +50,11 @@ const MarathiCourse: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               Join our structured 8-week online course with 90-minute classes every weekend and expert-led speaking practice.
             </p>
-            <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-4">
               Experience real progress with 24 hours of live instruction, 60-minute expert sessions, and 24/7 access to an AI-powered chatbot.
+            </p>
+            <p className="text-lg text-gray-700 font-semibold mb-4">
+              Course Fees: ₹1500 only
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 mb-8">
@@ -76,7 +79,7 @@ const MarathiCourse: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Enroll Now - ₹1500
+                Enroll for Free Demo class
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
